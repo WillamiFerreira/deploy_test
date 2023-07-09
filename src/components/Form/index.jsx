@@ -18,9 +18,10 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData)
-
-        axios.post('https://deploy-teste-api.onrender.com/', data )
+        //const data = Object.fromEntries(formData)
+        axios.post('https://deploy-teste-api.onrender.com/', Object.fromEntries(formData) )
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
 
     };
 

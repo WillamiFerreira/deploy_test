@@ -20,7 +20,7 @@ const Form = () => {
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData)
 
-        axios.post('linkdataapi.com.br', data )
+        axios.post('https://deploy-teste-api.onrender.com/', data )
 
     };
 
